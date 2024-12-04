@@ -9,23 +9,21 @@ let dragonDead = false;
 let startSound, start2Sound, bossFightSound, slashSound, endSound;
 
 function preload() {
-  // Loading GIFs
-  startGif = loadImage("start.GIF");
-  flashGif = loadImage("flash.gif");
-  openGif = loadImage("open.gif");
-  wrtntextGif = loadImage("wrtntext.gif");
-  fulltxtGif = loadImage("fulltxt.GIF");
-  baseGif = loadImage("base.GIF");
-  slashRGif = loadImage("slashR.GIF");
-  slashLGif = loadImage("slashL.GIF");
-  gameoverGif = loadImage("gameover.gif");
+ startGif = new Gif(this, "assets/start.GIF");
+flashGif = new Gif(this, "assets/flash.gif");
+openGif = new Gif(this, "assets/open.gif");
+wrtntextGif = new Gif(this, "assets/wrtntext.gif");
+fulltxtGif = new Gif(this, "assets/fulltxt.GIF");
+baseGif = new Gif(this, "assets/base.GIF");
+slashRGif = new Gif(this, "assets/slashR.GIF");
+slashLGif = new Gif(this, "assets/slashL.GIF");
+gameoverGif = new Gif(this, "assets/gameover.gif");
 
-  // Loading Sounds
-  startSound = loadSound("start.mp3");
-  start2Sound = loadSound("start2.mp3");
-  bossFightSound = loadSound("bossfight.mp3");
-  slashSound = loadSound("slash.mp3");
-  endSound = loadSound("end.mp3");
+startSound = new SoundFile(this, "assets/start.mp3");
+start2Sound = new SoundFile(this, "assets/start2.mp3");
+bossFightSound = new SoundFile(this, "assets/bossfight.mp3");
+slashSound = new SoundFile(this, "assets/slash.mp3");
+endSound = new SoundFile(this, "assets/end.mp3");
 
   // Load cursor image
   cursorImage = loadImage("mouse.PNG");
