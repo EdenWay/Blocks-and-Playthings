@@ -1,21 +1,48 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    color: green;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-#canvas-container {
-    position: relative;
-    width: 960px;
-    height: 540px;
+  margin: 0;
+  padding: 0;
+  background-color: #000000; 
+  overflow: hidden; 
+  font-family: 'Courier New', Courier, monospace;
+  color: #00ff00; 
 }
 
 canvas {
-    display: block;
+  display: block;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
+@font-face {
+  font-family: 'BinaryFont';
+  src: url('path-to-binary-font.ttf') format('truetype'); 
+}
+
+.glow-dot {
+  border-radius: 50%;
+  background: rgba(0, 255, 0, 0.5);
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+}
+
+.blinking-caret {
+  border-left: 2px solid #00ff00;
+  animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: #00ff00;
+  }
+}
+
+.text-highlight {
+  background-color: #00ff00;
+  color: #000000; 
+}
